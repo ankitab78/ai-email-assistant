@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DARK MODE BASE ===== */
+.dark {
+  color-scheme: dark;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Cards */
+.dark .card {
+  background-color: #1f2937;
+  color: #f1f5f9;
+}
+
+/* Inputs & textarea */
+.dark textarea,
+.dark select,
+.dark input {
+  background-color: #0d2463;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark textarea::placeholder,
+.dark input::placeholder {
+  color: #94a3b8;
+}
+
+/* Output text */
+.dark .output-text {
+  color: #f8fafc;
+}
+
+/* Muted text */
+.dark .text-muted {
+  color: #cbd5f5;
 }
